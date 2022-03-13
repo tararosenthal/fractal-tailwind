@@ -541,12 +541,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
-.h-fit{
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 .h-full{
   height: 100%;
 }
@@ -816,14 +810,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: 5rem;
   }
 
-  .xl\:h-screen{
-    height: 100vh;
-  }
-
-  .xl\:h-full{
-    height: 100%;
-  }
-
   .xl\:flex-row{
     flex-direction: row;
   }
@@ -838,12 +824,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:text-right{
     text-align: right;
-  }
-}
-
-@media (min-width: 736px){
-  .lg\:h-screen{
-    height: 100vh;
   }
 }
 
