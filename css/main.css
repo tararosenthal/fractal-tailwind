@@ -1,0 +1,109 @@
+@import url(fontawesome-all.min.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    #header {
+        background-attachment: fixed;
+        background-image: url(../../images/overlay.png), url(../../images/pattern-size1.svg);
+    }
+
+    .phone {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0 0 1.5em 0;
+        width: 9em;
+    }
+
+        .phone img {
+            border-radius: 0;
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+
+        .phone .inner, .phone:before, .phone:after {
+            display: block;
+            border: solid 2px rgba(255, 255, 255, 0.25);
+        }
+
+        .phone .inner {
+            position: relative;
+        }
+
+            .phone .inner:before, .phone .inner:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+            }
+
+            .phone .inner:before {
+                top: -1.375em;
+                margin-left: -0.64em;
+                width: 1.28em;
+                height: 0.16em;
+                border-radius: 0.5em;
+                background: rgba(255, 255, 255, 0.25);
+            }
+
+            .phone .inner:after {
+                bottom: -2.75em;
+                margin-left: -0.64em;
+                width: 1.28em;
+                height: 1.28em;
+                border-radius: 100%;
+                border: solid 2px rgba(255, 255, 255, 0.25);
+            }
+
+        .phone:before, .phone:after {
+            content: '';
+        }
+
+        .phone:before {
+            height: 2.5em;
+            border-radius: 1em 1em 0 0;
+            border-bottom: 0;
+        }
+
+        .phone:after {
+            height: 3.5em;
+            border-radius: 0 0 1em 1em;
+            border-top: 0;
+        }
+
+        @media all and (min-width: 480px) {
+            .phone {
+                margin: 0 0 3em 0;
+                width: 10em;
+            }
+
+            .phone .inner:before {
+                margin-left: calc(-1em * 0.714);
+                width: calc(2em * 0.714);
+                height: calc(0.25em * 0.714);
+            }
+
+            .phone .inner:after {
+                margin-left: calc(-1em * 0.714);
+                width: calc(2em * 0.714);
+                height: calc(2em * 0.714);
+            }
+        }
+
+        @media all and (min-width: 736px) {
+            .phone {
+                width: 14em;
+            }
+
+            .phone .inner:before {
+                margin-left: -1em;
+                width: 2em;
+                height: 0.25em;
+            }
+
+            .phone .inner:after {
+                margin-left: -1em;
+                width: 2em;
+                height: 2em;
+            }
+        }
