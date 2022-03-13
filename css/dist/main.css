@@ -490,16 +490,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.inset-0{
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
 
 .mb-8{
   margin-bottom: 2rem;
-}
-
-.mb-10{
-  margin-bottom: 2.5rem;
 }
 
 .mb-0{
@@ -534,12 +537,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.h-full{
-  height: 100%;
-}
-
 .h-screen{
   height: 100vh;
+}
+
+.h-fit{
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .w-full{
@@ -628,21 +637,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.75rem;
 }
 
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.py-7{
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
 .text-center{
   text-align: center;
 }
@@ -657,21 +651,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .font-bold{
   font-weight: 700;
 }
 
 .font-medium{
   font-weight: 500;
-}
-
-.italic{
-  font-style: italic;
 }
 
 .text-white{
@@ -811,9 +796,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-.hover\:bg-slate-200:hover{
+.hover\:bg-teal-100:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  background-color: rgb(204 251 241 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-teal-600:hover{
@@ -821,34 +806,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(13 148 136 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-teal-200:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(153 246 228 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-teal-100:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 251 241 / var(--tw-bg-opacity));
-}
-
-.hover\:text-slate-200:hover{
-  --tw-text-opacity: 1;
-  color: rgb(226 232 240 / var(--tw-text-opacity));
-}
-
 .hover\:text-teal-200:hover{
   --tw-text-opacity: 1;
   color: rgb(153 246 228 / var(--tw-text-opacity));
 }
 
-.hover\:text-teal-100:hover{
-  --tw-text-opacity: 1;
-  color: rgb(204 251 241 / var(--tw-text-opacity));
-}
-
 @media (min-width: 980px){
   .xl\:mr-20{
     margin-right: 5rem;
+  }
+
+  .xl\:h-screen{
+    height: 100vh;
+  }
+
+  .xl\:h-full{
+    height: 100%;
   }
 
   .xl\:flex-row{
@@ -868,6 +841,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+@media (min-width: 736px){
+  .lg\:h-screen{
+    height: 100vh;
+  }
+}
+
 @media (min-width: 480px){
   .md\:mb-8{
     margin-bottom: 2rem;
@@ -879,10 +858,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:mb-16{
     margin-bottom: 4rem;
-  }
-
-  .md\:h-screen{
-    height: 100vh;
   }
 
   .md\:w-fit{
@@ -920,5 +895,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+}
+
+@media (orientation: landscape){
+  .landscape\:h-fit{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  @media (min-width: 980px){
+    .landscape\:xl\:h-screen{
+      height: 100vh;
+    }
   }
 }
